@@ -1,0 +1,323 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 48rem) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: space-between;
+        padding: 0 1rem;
+    }
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav a {
+        padding: 0.7rem 1rem;
+    }
+    .main {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .add-todo {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .add-todo-row {
+        grid-column: 1 / -1;
+    }
+    .add-todo-row input {
+        display: inline-block;
+        width: 90%;
+        padding: 0.5rem;
+        border-radius: 20px;
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    }
+    .sort {
+        display: none;
+    }
+    .list-todo {
+        grid-column: 1 / -1;
+    }
+    .load-more {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+    }
+    .load-more button {
+        padding: 1rem;
+        background-color: #0099ff;
+        border-radius: 10px;
+    }
+    .load-more button:disabled,
+    .load-more button[disabled] {
+        background-color: #f0f5f5;
+        opacity: 0.7;
+    }
+
+    footer {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .subscription-cancel {
+        background-color: #b84dff;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .button-themeToggler {
+        padding: 0.5rem;
+        border-radius: 10px;
+        background-color: purple;
+    }
+    .pay-subscription {
+        padding: 2rem;
+    }
+    .pay-subscription-button-submit-div {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .pay-subscription-button-submit {
+        background-color: #b84dff;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .updatePayment-button-submit-div {
+        display: flex;
+        justify-content: center;
+    }
+    .updatePayment-button-submit {
+        background-color: #b84dff;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .help-column {
+        grid-column: 1 / -1;
+    }
+    .help-row {
+        display: flex;
+        padding: 1rem;
+    }
+    .help-text {
+        padding-left: 0.4rem;
+    }
+    .settings-column {
+        grid-column: 1 / -1;
+        padding: 2rem;
+    }
+    .edit {
+        align-items: center;
+    }
+    .edit form {
+        width: 90%;
+        display: flex;
+    }
+    .inputTodo {
+        width: 90%;
+        border-radius: 5px;
+        padding: 0.4rem;
+    }
+    .todo-edit-icon {
+        padding: 0 0.7rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+    header nav a {
+        padding: 0 0.5rem;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-gap: 1rem;
+    }
+    .add-todo {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .add-todo-row {
+        grid-column: 2 / 3;
+    }
+    .add-todo-row input {
+        display: inline-block;
+        width: 90%;
+        padding: 0.5rem;
+        border-radius: 20px;
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    }
+    .sort {
+        grid-column: 1 / -1;
+        justify-self: flex-end;
+        padding: 0 1rem;
+    }
+    .list-todo {
+        grid-column: 2 / -2;
+    }
+
+    footer {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .edit {
+        align-items: center;
+    }
+    .edit form {
+        width: 90%;
+        display: flex;
+    }
+    .inputTodo {
+        width: 90%;
+        border-radius: 5px;
+        padding: 0.4rem;
+    }
+    .todo-edit-icon {
+        padding: 0 0.7rem;
+    }
+    .load-more {
+        grid-column: 2 / -2;
+        display: flex;
+        justify-content: center;
+    }
+    .load-more button {
+        padding: 1rem;
+        background-color: #0099ff;
+        border-radius: 10px;
+    }
+    .load-more button:disabled,
+    .load-more button[disabled] {
+        background-color: #f0f5f5;
+        opacity: 0.7;
+    }
+    .help-column {
+        grid-column: 2 / 3;
+    }
+    .help-row {
+        display: flex;
+        padding: 1rem;
+    }
+    .help-text {
+        padding-left: 0.4rem;
+    }
+    .updatePayment-column {
+        grid-column: 2 /3;
+    }
+    .updatePayment-button-submit-div {
+        display: flex;
+        justify-content: center;
+    }
+    .updatePayment-button-submit {
+        background-color: #b84dff;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .settings-column {
+        grid-column: 2 / 3;
+    }
+    .pay-subscription {
+        grid-column: 2 / 3;
+    }
+    .pay-subscription-button-submit-div {
+        display: flex;
+        justify-content: center;
+    }
+    .pay-subscription-button-submit {
+        background-color: #b84dff;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .subscription-column {
+        grid-column: 2 / 3;
+    }
+    .subscription-cancel {
+        background-color: #b84dff;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .button-themeToggler {
+        padding: 0.5rem;
+        border-radius: 10px;
+        background-color: purple;
+    }
+}
+
+.todo {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+.todo-text-row {
+    display: flex;
+}
+.todo-text-row a {
+    padding-left: 1rem;
+}
+.todo-icon {
+    padding-right: 1rem;
+}
+.incomplete .text {
+    font-size: 1.1rem;
+}
+.complete {
+    opacity: 0.5;
+}
+.frozen {
+    opacity: 0.7;
+}
+.complete .text {
+    text-decoration: line-through;
+}
+.fa-check-square {
+    color: green;
+}
+.fa-minus-square {
+    color: red;
+}
+.fa-arrow-square-right {
+    font-size: 1.2rem;
+    color: green;
+}
+.faPlusCircle {
+    border: none;
+}
+.todo-icon button {
+    border: none;
+    background-color: transparent;
+}
+button {
+    border: none;
+    background-color: transparent;
+}
